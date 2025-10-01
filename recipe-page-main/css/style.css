@@ -1,0 +1,141 @@
+body{
+    background-color:  hsl(30, 54%, 90%);
+    padding: 40px;
+    font-family: 'Outfit', sans-serif;
+    color: hsl(30, 10%, 34%);
+}
+
+.container{
+    background-color:  hsl(0, 0%, 100%);
+    margin: auto;
+    width: 50%;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 650px;
+}
+
+.landing-page img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h3{
+    font-family: 'Young Serif', serif;
+}
+.landing-page h1{
+    color: hsl(24, 5%, 18%);
+    font-size: 40px;
+}
+
+h3:not(:first-child){
+    color: hsl(14, 45%, 36%);
+}
+h3:first-child{
+    color: hsl(332, 51%, 32%);
+}
+.landing-page p{
+    font-size: 16px;
+}
+
+.preparation{
+    background-color: hsl(330, 100%, 98%);
+    padding:5px 5px 5px 20px;
+}
+ul, ol{
+    line-height: 1.6em;
+}
+ul li::marker, ol li::marker{
+    color: hsl(14, 45%, 36%);
+    font-weight: 900;
+}
+li{
+    padding-bottom: .6em;
+}
+
+.landing-page-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  /* margin: 20px; */
+  font-size: 16px;
+  text-align: left;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.landing-page-table td {
+  padding: 12px 15px;
+}
+
+.landing-page-table tbody tr:not(:last-child), hr {
+  border-bottom: hsl(30, 54%, 90%) 1px solid;
+}
+
+.landing-page-table tr td:nth-child(2){
+    color: hsl(14, 45%, 36%);
+    font-weight: 900;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  margin-top: 10px; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  text-decoration: none;
+}
+
+.email-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: hsl(228, 45%, 44%);
+  color: #fff !important;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.email-btn:hover {
+  background-color: hsl(228, 45%, 35%);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .landing-page h1 {
+        font-size: 28px;
+    }
+    .landing-page p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    .landing-page h1 {
+        font-size: 24px;
+    }
+    .landing-page p,
+    .landing-page-table td {
+        font-size: 14px;
+    }
+    .email-btn {
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
