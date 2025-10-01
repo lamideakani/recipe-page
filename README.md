@@ -5,10 +5,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
@@ -16,9 +14,10 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+This is a solution to the Recipe Page challenge on Frontend Mentor. The goal of this challenge was to build a simple and responsive recipe page using only HTML and CSS, following the given style guide.  
+
 
 ### Screenshot
 
@@ -27,71 +26,85 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/lamideakani/recipe-page)
+- Live Site URL: (https://lamideakani.github.io/recipe-page/)
 
-## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS3 (custom properties, selectors, pseudo-classes)
+- A little Flexbox (for centering)
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Responsive design
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+During this challenge, I ran into a few things that weren’t so obvious at first, but I figured them out while working through the project:
 
-To see how you can add code snippets, see below:
+- **Adding borders between table rows except the last one** using `:not(:last-child)`  
+  This was useful to create separation lines without double borders at the bottom.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
+    ```css
+    .landing-page-table tbody tr:not(:last-child){
+      border-bottom: hsl(30, 54%, 90%) 1px solid;
+    }
+    ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- **Targeting only the second column in a table with nth-child**
+  I used this to style just the values column differently from the labels.
+  
+    ```css
+    .landing-page-table tr td:nth-child(2){
+    color: hsl(14, 45%, 36%);
+    font-weight: 900;
+    }
+    ```
+- **Centering an image inside a container**
+  At first, margin and align-self didn’t work, but using flexbox solved it:
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+    ```css
+    .container{
+    background-color:  hsl(0, 0%, 100%);
+    margin: auto;
+    width: 50%;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 650px;
+    }
+    ```
+- **Creating an email link with mailto: instead of a regular link.**
+   ```html 
+    <a href="mailto:olamideenoch167@gmail.com?subject=Frontend Mentor Project Feedback" class="email-btn">
+  Lamideakanni
+    </a>.
+    ```
+These were little stumbling blocks, but I’m glad I got through them — each one made the final design cleaner.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Going forward, I want to focus more on:  
+- Improving my **CSS layouts** (especially Grid and responsive design).  
+- Getting more comfortable with **pseudo-classes and selectors** like `:not()`, `nth-child()`, etc.  
+- Practicing **cleaner, reusable CSS** instead of repeating styles.  
+- Becoming more confident with **accessibility features** (semantic HTML, alt text, contrast).  
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Brad Traversy on YouTube](https://www.youtube.com/c/TraversyMedia) - His tutorials always make HTML and CSS concepts easier to understand, and I found them really helpful while practicing.  
+- [ChatGPT (OpenAI)](https://chat.openai.com/) - Helped me understand and fix specific issues like centering content, targeting elements with `nth-child`, and styling list markers separately.  
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@lamideakani](https://www.frontendmentor.io/profile/lamideakani)  
+- Twitter - [@lamideakanni](https://twitter.com/lamideakanni)  
+- Email - [olamideenoch167@gmail.com](mailto:olamideenoch167@gmail.com)  
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+Thanks to Frontend Mentor for this challenge!
